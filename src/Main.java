@@ -2,7 +2,8 @@ public class Main
 {
     public  static  void main(String[] arg) {
         //-----IMPORTANTE-----
-        int tamañovector=10;
+        //Para cambiar tamaño del vector cambiar esta variable
+        int tamañovector=3000;
 
         /**Declaracion de clases*/
         Randomizador R = new Randomizador(tamañovector);
@@ -18,11 +19,11 @@ public class Main
         Comparable[] ListaAOrdenar= R.lectura();
 
         /**Ordenamiento por cada sort "Lista desordenada"*/
-        Comparable[] a= burbuja.sortear(ListaAOrdenar);
 
+        Comparable[] a= burbuja.sortear(ListaAOrdenar);
         ListaAOrdenar= R.lectura();
-        //Comparable[] b= Gnome.sortear(ListaAOrdenar);
-        //ListaAOrdenar= R.lectura();
+        Comparable[] b= Gnome.sortear(ListaAOrdenar);
+        ListaAOrdenar= R.lectura();
         Comparable[] c= Merge.sortear(ListaAOrdenar);
         ListaAOrdenar= R.lectura();
         Comparable[] d = Quick.sortear(ListaAOrdenar,0,tamañovector-1);
@@ -33,19 +34,13 @@ public class Main
 
         /**Ordenamiento por cada sort  "Lista ordenada"*/
 
+        burbuja.sortear(ListaAOrdenar);
+        Gnome.sortear(ListaAOrdenar);
+        Merge.sortear(ListaAOrdenar);
+        Quick.sortear(ListaAOrdenar,0,tamañovector-1);
+        Radix.sortear(ListaAOrdenar,tamañovector);
 
 
-
-        //---------------Esto se debe borrar---------------------
-        //---------------Prueba Sorts----------------------------
-        for (int i =0;i<10;i++)
-        {
-
-            System.out.println(a[i]);
-            System.out.println(c[i]);
-            System.out.println(d[i]);
-            System.out.println(e[i]);
-        }
 
 
 

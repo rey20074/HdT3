@@ -1,24 +1,22 @@
 public class GnomeSort {
 
     //Codigo obtenido de GeeksforGeeks
-    public Comparable[] sortear(Comparable[] caja)
+    public Comparable[] sortear(Comparable[] list)
     {
-        int n=caja.length;
-        int index = 0;
+        int i=1;
+        int j=2;
+        Comparable tmp;
 
-        while (index < n) {
-            if (index == 0)
-                index++;
-            if (caja[index].compareTo(caja[index - 1])>=0)
-                index++;
-            else {
-                Comparable temp =caja[index];
-                caja[index]=caja[index+1];
-                caja[index+1]=temp;
-
-                index--;
+        while(i<list.length){
+            if(list[i-1].compareTo(list[i])>0){
+                tmp = list[i-1];
+                list[i-1] =list[i];
+                list[i--] = tmp;
+                i = (i==0) ? j++:i;
+            }else{
+                i = j; j++;
             }
         }
-        return caja;
+        return list;
     }
 }
