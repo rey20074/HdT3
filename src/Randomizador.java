@@ -5,18 +5,22 @@ import java.util.Scanner;
 /**Clase que se encarga de generar los numeros, leer y crear el archivo*/
 public class Randomizador {
 
-    Random rnd;
-    public Randomizador()
+    int tamaño=0;
+    public Randomizador(int e)
     {
+        tamaño =e;
         rnd = new Random();
     }
+
+    Random rnd;
+
 
     public  void generate()
     {
         String acu="";
-        for (int i =0; i< 3000;i++)
+        for (int i =0; i< tamaño;i++)
         {
-            acu+=rnd.nextInt(4000)+ "\n";
+            acu+=rnd.nextInt(tamaño)+ "\n";
         }
         CreateFile(acu);
     }
@@ -46,18 +50,18 @@ public class Randomizador {
     /**Lee el archivo y regresa una lista de Comparable*/
     public Comparable[] lectura()
     {
-        Comparable[] caja = new Comparable[3000];
+        Comparable[] caja = new Comparable[tamaño];
         try
         {
             /**Asignación de lineas a array de Comparable*/
 
             File texto = new File("Almacen.txt");
             Scanner Lector = new Scanner(texto);
-            for(int j=0;j<3000;j++)
+            for(int j=0;j<tamaño;j++)
             {
 
                 String datos = Lector.nextLine();
-                caja[j]= datos;
+                caja[j]=Integer.valueOf(datos);
 
 
 
