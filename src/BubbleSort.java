@@ -1,8 +1,4 @@
 public class BubbleSort {
-    public BubbleSort()
-    {
-
-    }
 
     public  Comparable[] sortear(Comparable[] ordenar)
     {

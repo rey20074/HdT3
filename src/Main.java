@@ -4,15 +4,15 @@ public class Main
         /**Declaracion de clases*/
         Randomizador R = new Randomizador();
         BubbleSort burbuja = new BubbleSort();
+        GnomeSort Gnome = new GnomeSort();
 
         //-----------------------------------------
 
         R.generate();
         /**Se recibe lista a ordenar*/
         Comparable[] ListaAOrdenar= R.lectura();
-
-
-        Comparable[] ListaOrdenada= burbuja.sortear(ListaAOrdenar);
+        Comparable[] a= burbuja.sortear(ListaAOrdenar);
+        Comparable[] b= Gnome.sortear(ListaAOrdenar);
 
 
 
@@ -21,7 +21,7 @@ public class Main
         //---------------Prueba Sorts----------------------------
         for (int i =0;i<10;i++)
         {
-            System.out.println(ListaOrdenada[i]);
+            System.out.println(b[i]);
         }
 
 
