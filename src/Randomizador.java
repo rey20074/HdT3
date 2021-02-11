@@ -16,7 +16,7 @@ public class Randomizador {
         String acu="";
         for (int i =0; i< 3000;i++)
         {
-            acu+=rnd.nextInt();
+            acu+=rnd.nextInt(4000)+ "\n";
         }
         CreateFile(acu);
     }
@@ -53,13 +53,16 @@ public class Randomizador {
 
             File texto = new File("Almacen.txt");
             Scanner Lector = new Scanner(texto);
-            while (Lector.hasNext())
+            for(int j=0;j<3000;j++)
             {
-                int i=0;
+
                 String datos = Lector.nextLine();
-                caja[i++]=datos;
+                caja[j]= datos;
+
+
 
             }
+            Lector.close();
 
 
         }
