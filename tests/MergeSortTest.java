@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class MergeSortTest {
     @Test
     void sortear() {
-        int tamañovector=3000;
-        Randomizador R = new Randomizador(tamañovector);
+        int tamanovector=3000;
+        Randomizador R = new Randomizador(tamanovector);
         Comparable[] list= R.lectura();
 
         Comparable[] first = new Comparable[list.length / 2];

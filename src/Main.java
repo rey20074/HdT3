@@ -3,10 +3,10 @@ public class Main
     public  static  void main(String[] arg) {
         //-----IMPORTANTE-----
         //Para cambiar tamaño del vector cambiar esta variable
-        int tamañovector=3000;
+        int tamanovector=3000;
 
         /**Declaracion de clases*/
-        Randomizador R = new Randomizador(tamañovector);
+        Randomizador R = new Randomizador(tamanovector);
         BubbleSort burbuja = new BubbleSort();
         GnomeSort Gnome = new GnomeSort();
         MergeSort Merge = new MergeSort();
@@ -26,9 +26,9 @@ public class Main
         ListaAOrdenar= R.lectura();
         Comparable[] c= Merge.sortear(ListaAOrdenar);
         ListaAOrdenar= R.lectura();
-        Comparable[] d = Quick.sortear(ListaAOrdenar,0,tamañovector-1);
+        Comparable[] d = Quick.sortear(ListaAOrdenar,0,tamanovector-1);
         ListaAOrdenar= R.lectura();
-        Comparable[] e = Radix.sortear(ListaAOrdenar,tamañovector);
+        Comparable[] e = Radix.sortear(ListaAOrdenar,tamanovector);
 
 
 
@@ -37,8 +37,8 @@ public class Main
         burbuja.sortear(ListaAOrdenar);
         Gnome.sortear(ListaAOrdenar);
         Merge.sortear(ListaAOrdenar);
-        Quick.sortear(ListaAOrdenar,0,tamañovector-1);
-        Radix.sortear(ListaAOrdenar,tamañovector);
+        Quick.sortear(ListaAOrdenar,0,tamanovector-1);
+        Radix.sortear(ListaAOrdenar,tamanovector);
 
 
 
