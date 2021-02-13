@@ -31,17 +31,15 @@ class QuickSortTest {
     }
 
     @Test
-    void sortear(Comparable arrr[], int low, int high) {
+    void sortear() {
 
-        int tamanovector=3000;
+        int tamanovector=1000;
         Randomizador R = new Randomizador(tamanovector);
         Comparable[] arr= R.lectura();
 
         if (0 < tamanovector)
         {
             int pi = Quick(arr,0, tamanovector);
-            sortear(arr, 0, pi-1);
-            sortear(arr, pi+1, tamanovector-1);
         }
 
     }
