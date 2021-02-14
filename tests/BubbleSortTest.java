@@ -7,7 +7,7 @@ class BubbleSortTest {
     @Test
     void sortear() {
 
-        int tamanovector=1000;
+        int tamanovector=100;
         Randomizador R = new Randomizador(tamanovector);
         Comparable[] ordenar= R.lectura();
 

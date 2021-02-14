@@ -33,13 +33,13 @@ class QuickSortTest {
     @Test
     void sortear() {
 
-        int tamanovector=1000;
+        int tamanovector=100;
         Randomizador R = new Randomizador(tamanovector);
         Comparable[] arr= R.lectura();
 
         if (0 < tamanovector)
         {
-            int pi = Quick(arr,0, tamanovector);
+            int pi = Quick(arr,0, tamanovector-1);
         }
 
     }
